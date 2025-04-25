@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar-container">
+        <div class="pillar-menu" id="pillarMenu">
+            <div class="pillar-item">
+                <div class="pillar-icon">
+                    <a href="financials.html"><i class="fas fa-coins" style="color: white;"></i></a>
+                </div>
+                <span>Financials</span>
+            </div>
+            <div class="pillar-item">
+                <div class="pillar-icon">
+                    <a href="customers.html"><i class="fas fa-users" style="color: white;"></i></a>
+                </div>
+                <span>Customers</span>
+            </div>
+            <div class="pillar-item">
+                <div class="pillar-icon">
+                    <a href="operation.html"><img src="img/operation.png" alt="Operation" style="filter: brightness(0) invert(1)"></a>
+                </div>
+                <span>Operations</span>
+            </div>
+            <div class="pillar-item">
+                <div class="pillar-icon">
+                    <a href="employee.html"><i class="fa-regular fa-user" style="color: white;"></i></a>
+                </div>
+                <span>Employee</span>
+            </div>
+            <button class="close-btn" id="closeBtn">✕</button>
+        </div>
+
+        <nav class="navbar">
+            <a href="home.html" class="nav-item active">
+                <img src="img/home.png" class="nav-icon" alt="Home">
+                <span>Home</span>
+            </a>
+            <a href="search.html" class="nav-item">
+                <i class="fas fa-search nav-icon"></i>
+                <span>Search</span>
+            </a>
+            <button class="pillar-btn" id="pillarBtn">
+                <img src="img/pillar.png" class="nav-icon" alt="Pillar">
+            </button>
+            <a href="watchlist.html" class="nav-item">
+                <img src="img/watchlist.png" class="nav-icon" alt="Watchlist">
+                <span>Watchlist</span>
+            </a>
+            <a href="action-centre.html" class="nav-item">
+                <img src="img/action.png" class="nav-icon" alt="Action Centre">
+                <span>Action Centre</span>
+            </a>
+        </nav>
+        
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const pillarBtn = document.getElementById('pillarBtn');
+            const closeBtn = document.getElementById('closeBtn');
+            const pillarMenu = document.getElementById('pillarMenu');
+            
+            pillarBtn.addEventListener('click', function() {
+                pillarMenu.classList.toggle('active');
+                pillarBtn.classList.toggle('hide');
+            });
+            
+            closeBtn.addEventListener('click', function() {
+                pillarMenu.classList.remove('active');
+                pillarBtn.classList.remove('hide');
+            });
+        });
+    </script>
+</body>
+</html>
